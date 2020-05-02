@@ -1,11 +1,9 @@
 const countTotalSalary = function(employees) {
-  const salaries = Object.values(employees);
-
   let total = 0;
 
-  for (const salary of salaries) {
+  Object.values(employees).forEach(salary => {
     total += salary;
-  }
+  });
 
   return total;
 };

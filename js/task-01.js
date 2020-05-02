@@ -9,8 +9,6 @@ user.mood = 'happy';
 user.hobby = 'skydiving';
 user.premium = false;
 
-const keys = Object.keys(user);
-
-for (const key of keys) {
+Object.keys(user).forEach(key => {
   console.log(`${key}:${user[key]}`);
-}
+});

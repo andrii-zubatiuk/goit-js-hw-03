@@ -1,5 +1,15 @@
 const findBestEmployee = function(employees) {
-  const employee = Object.keys(employees);
+  let tasks = 0;
+  let name;
+
+  Object.keys(employees).forEach(key => {
+    if (employees[key] > tasks) {
+      tasks = employees[key];
+      name = key;
+    }
+  });
+
+  return name;
 };
 
 console.log(
